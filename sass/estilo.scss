@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+$gris:rgba(180,174,174,1);
+$negro:#060c08;
+$fuente:'bangers';
+
+*{
+    margin:0;
+    padding:0;
+}
+
+
+body {
+    height: 100vh;
+    background: rgb(19,17,17);
+    background: linear-gradient(360deg, rgba(19,17,17,1) 0%, rgba(180,174,174,1) 50%, rgba(19,17,17,1) 100%);
+    background-attachment: fixed;
+}
+.menu {
+    display:flex;
+    justify-content: end;
+    font-family: $fuente;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    margin:10px;
+    li {
+        display:inline;
+        margin:10px;
+    }
+    a{
+        text-decoration: none;
+        color:$gris;
+    }
+}
+
+.content {
+    display:grid;
+    grid-template-areas: 
+        "logo titulo titulo"
+        "contenido contenido contenido";
+    grid-template-columns: 210px auto auto;
+    grid-template-rows: 210px auto auto;
+        &__logo {
+            grid-area:logo;
+            align-self: center;
+            display:flex;
+        }
+        #logo {
+            width: 200px;
+            height: 200px;
+            animation: animar 2s;
+            animation-iteration-count: infinite;
+        }
+
+        &__titulo { /*funciona para todas las paginas*/
+            grid-area: titulo;
+            align-self: center;
+            justify-self: center;
+                h1{
+                    font-family: $fuente;
+                    font-size: 35px;
+                    line-height: 61px;
+                    color:$negro;
+                    display:flex;
+                }
+        }
+        &__contenido { /*pag home*/
+            grid-area: contenido;
+            font-family: $fuente;
+            font-size: 30px;
+            color: $negro;
+            align-self: center;
+            justify-self: center;
+            display:flex;
+            margin:20px;
+        }
+}
+
+.content__galeria{ /*galeria*/
+        grid-area: contenido;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        &__cuadro{
+            width: 271px;
+            height: 243px;
+            border-radius: 35px;
+            margin:15px;
+        }
+}
+.content__cerveza{ /* cervezas*/
+        grid-area:contenido;
+        justify-self: center;
+        display: grid;
+        grid-template-areas: 
+        "foto1 texto1"
+        "foto2 texto2"
+        "foto3 texto3"
+        "foto4 texto4";
+        grid-template-columns: 232px auto;
+        grid-template-rows: 201px auto;
+            &__foto{
+                width: 232px;
+                height: 201px;
+                margin:20px;
+                border-radius: 35px;
+                justify-self: center;
+                align-self: center;
+            }
+            #foto1{
+            grid-area:foto1;
+            }
+            #foto2{
+            grid-area:foto2;
+            }
+            #foto3{
+            grid-area:foto3;
+            }
+            #foto4{
+            grid-area:foto4;
+            }
+            &__texto {
+                font-family: $fuente;
+                font-size: 25px;
+                color: $negro;
+                justify-self: center;
+                align-self: center;
+                margin:10px;
+                #text1{
+                    grid-area:texto1;
+                }
+                #text2{
+                    grid-area:texto2;
+                }
+                #text3{
+                    grid-area:texto3;
+                }
+                #text4{
+                    grid-area:texto4;
+                }
+            }
+}
+
+
+footer{
+    font-family: $fuente;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: $gris;
+    position:relative;
+    bottom:0;
+    
+    }
+
+
+
+/*contacto*/
+.contacto{
+    grid-area: contenido;
+    justify-content: center;
+    align-self:center;
+}
+
+/*animacion*/
+
+@keyframes animar {
+    0% {transform: scale(1.1,1.1)};
+    20% {transform: scale(1.2,1.2)};
+    40% {transform: scale(1.1,1.1)};
+    60% {transform: scale(1,1)};
+    80% {transform: scale(0.9,0.9)};
+    100% {transform: scale(1,1)};
+}
+/*responsive*/
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-areas: 
+            "logo logo logo"
+            "titulo titulo titulo"
+            "contenido contenido contenido";
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto;
+        &__cerveza{ 
+            grid-template-areas: 
+            "foto1"
+            "texto1"
+            "foto2"
+            "texto2"
+            "foto3"
+            "texto3"
+            "foto4"
+            "texto4";
+            grid-template-columns: 200px ;
+            grid-template-rows: 200px;
+        }
+    }
+}
