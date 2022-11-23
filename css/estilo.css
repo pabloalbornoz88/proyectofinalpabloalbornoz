@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -9,12 +9,13 @@ body {
   background: rgb(19, 17, 17);
   background: linear-gradient(360deg, rgb(19, 17, 17) 0%, rgb(180, 174, 174) 50%, rgb(19, 17, 17) 100%);
   background-attachment: fixed;
+  bottom: 0;
 }
 
 .menu {
   display: flex;
   justify-content: end;
-  font-family: "bangers";
+  font-family: "Signika", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 25px;
@@ -53,15 +54,16 @@ body {
   justify-self: center;
 }
 .content__titulo h1 {
-  font-family: "bangers";
+  font-family: "Signika", sans-serif;
   font-size: 35px;
   line-height: 61px;
   color: #060c08;
   display: flex;
 }
-.content__contenido { /*pag home*/
+.content__contenido {
+  /*pag home*/
   grid-area: contenido;
-  font-family: "bangers";
+  font-family: "Signika", sans-serif;
   font-size: 30px;
   color: #060c08;
   align-self: center;
@@ -70,7 +72,8 @@ body {
   margin: 20px;
 }
 
-.content__galeria { /*galeria*/
+.content__galeria {
+  /*galeria*/
   grid-area: contenido;
   display: flex;
   flex-wrap: wrap;
@@ -83,7 +86,8 @@ body {
   margin: 15px;
 }
 
-.content__cerveza { /* cervezas*/
+.content__cerveza {
+  /* cervezas*/
   grid-area: contenido;
   justify-self: center;
   display: grid;
@@ -112,7 +116,7 @@ body {
   grid-area: foto4;
 }
 .content__cerveza__texto {
-  font-family: "bangers";
+  font-family: "Signika", sans-serif;
   font-size: 25px;
   color: #060c08;
   justify-self: center;
@@ -133,7 +137,7 @@ body {
 }
 
 footer {
-  font-family: "bangers";
+  font-family: "Signika", sans-serif;
   font-size: 18px;
   line-height: 22px;
   text-align: center;
