@@ -1,0 +1,23 @@
+@media (max-width: 768px) {
+    .content {
+      grid-template-areas:
+        "logo logo logo"
+        "titulo titulo titulo"
+        "contenido contenido contenido";
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto auto;
+      &__cerveza {
+        grid-template-areas:
+          "foto1"
+          "texto1"
+          "foto2"
+          "texto2"
+          "foto3"
+          "texto3"
+          "foto4"
+          "texto4";
+        grid-template-columns: 200px;
+        grid-template-rows: 200px;
+      }
+    }
+  }
