@@ -54,6 +54,7 @@ body {
   background: linear-gradient(360deg, rgb(19, 17, 17) 0%, rgb(180, 174, 174) 50%, rgb(19, 17, 17) 100%);
   background-attachment: fixed;
   bottom: 0;
+  overflow-x: hidden;
 }
 
 .menu {
@@ -91,6 +92,7 @@ body {
   height: 200px;
   animation: animar 3s;
   animation-iteration-count: infinite;
+  margin: auto;
 }
 .content__titulo {
   /*funciona para todas las paginas*/
@@ -100,8 +102,7 @@ body {
 }
 .content__titulo h1 {
   font-family: "Signika", sans-serif;
-  font-size: 35px;
-  line-height: 61px;
+  font-size: 60px;
   color: #060c08;
   display: flex;
 }
@@ -109,12 +110,12 @@ body {
   /*pag home*/
   grid-area: contenido;
   font-family: "Signika", sans-serif;
-  font-size: 30px;
+  font-size: 40px;
   color: #060c08;
   align-self: center;
   justify-self: center;
   display: flex;
-  margin: 20px;
+  margin: 50px;
 }
 
 .content__galeria {
@@ -205,7 +206,6 @@ footer {
   margin: 5px;
 }
 .contacto .boton {
-  font-family: "Signika", sans-serif;
   color: #060c08;
   background-color: rgb(180, 174, 174);
   margin: 5px;

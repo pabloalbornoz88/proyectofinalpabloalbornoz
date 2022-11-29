@@ -22,6 +22,7 @@ body {
   );
   background-attachment: fixed;
   bottom: 0;
+  overflow-x: hidden;
 }
 .menu {
   display: flex;
@@ -59,6 +60,7 @@ body {
     height: 200px;
     animation: animar 3s;
     animation-iteration-count:infinite;
+    margin:auto;
   }
 
   &__titulo {
@@ -68,8 +70,7 @@ body {
     justify-self: center;
     h1 {
       font-family: $fuente;
-      font-size: 35px;
-      line-height: 61px;
+      font-size: 60px;
       color: $negro;
       display: flex;
     }
@@ -78,14 +79,16 @@ body {
     /*pag home*/
     grid-area: contenido;
     font-family: $fuente;
-    font-size: 30px;
+    font-size: 40px;
     color: $negro;
     align-self: center;
     justify-self: center;
     display: flex;
-    margin: 20px;
+    margin: 50px;
   }
+  
 }
+
 
 .content__galeria {
   /*galeria*/
@@ -167,7 +170,8 @@ footer {
   text-align: center;
   color: $gris;
   position: relative;
-  bottom: 0;
+  bottom:0;
+ 
 }
 
 /*contacto*/
@@ -177,10 +181,10 @@ footer {
   font-family: $fuente;
   margin:5px;
   .boton{
-    font-family: $fuente;
     color: $negro;
     background-color: $gris;
     margin:5px;
   }
-}
+  }
+
 
