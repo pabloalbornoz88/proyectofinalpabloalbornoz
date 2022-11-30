@@ -6,8 +6,7 @@
 
 body {
   height: 100vh;
-  background: rgb(19, 17, 17);
-  background: linear-gradient(360deg, rgb(19, 17, 17) 0%, rgb(180, 174, 174) 50%, rgb(19, 17, 17) 100%);
+  background: rgba(82, 95, 99, 0.767);
   background-attachment: fixed;
   bottom: 0;
   overflow-x: hidden;
@@ -61,6 +60,10 @@ body {
   font-weight: 400;
   font-size: 25px;
   line-height: 30px;
+}
+.menu a:hover {
+  color: #060c08;
+  transition: all 1s;
 }
 
 .content {
@@ -133,6 +136,7 @@ body {
   grid-template-areas: "foto1 texto1" "foto2 texto2" "foto3 texto3" "foto4 texto4";
   grid-template-columns: 232px auto;
   grid-template-rows: 201px auto;
+  margin: 10px;
 }
 .content__cerveza__foto {
   width: 232px;

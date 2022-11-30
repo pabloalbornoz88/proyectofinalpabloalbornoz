@@ -27,6 +27,10 @@ $fuente: "Signika", sans-serif;
     font-weight: 400;
     font-size: 25px;
     line-height: 30px;
+    &:hover{
+      color:$negro;
+      transition:all 1s;
+    }
     }
 }
 
@@ -106,6 +110,7 @@ $fuente: "Signika", sans-serif;
     "foto4 texto4";
   grid-template-columns: 232px auto;
   grid-template-rows: 201px auto;
+  margin: 10px;
   &__foto {
     width: 232px;
     height: 201px;
