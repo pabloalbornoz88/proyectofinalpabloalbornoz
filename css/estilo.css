@@ -1,4 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: rgb(19, 17, 17);
+  background: linear-gradient(360deg, rgb(19, 17, 17) 0%, rgb(180, 174, 174) 50%, rgb(19, 17, 17) 100%);
+  background-attachment: fixed;
+  bottom: 0;
+  overflow-x: hidden;
+}
+
 @keyframes animar {
   0% {
     transform: scale(1.01, 1.01);
@@ -31,40 +45,9 @@
     transform: scale(1, 1);
   }
 }
-@media (max-width: 768px) {
-  .content {
-    grid-template-areas: "logo logo logo" "titulo titulo titulo" "contenido contenido contenido";
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
-  }
-  .content__cerveza {
-    grid-template-areas: "foto1" "texto1" "foto2" "texto2" "foto3" "texto3" "foto4" "texto4";
-    grid-template-columns: 200px;
-    grid-template-rows: 200px;
-  }
-}
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  height: 100vh;
-  background: rgb(19, 17, 17);
-  background: linear-gradient(360deg, rgb(19, 17, 17) 0%, rgb(180, 174, 174) 50%, rgb(19, 17, 17) 100%);
-  background-attachment: fixed;
-  bottom: 0;
-  overflow-x: hidden;
-}
-
 .menu {
   display: flex;
   justify-content: end;
-  font-family: "Signika", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 30px;
   margin: 10px;
 }
 .menu li {
@@ -72,8 +55,12 @@ body {
   margin: 10px;
 }
 .menu a {
-  text-decoration: none;
   color: rgb(180, 174, 174);
+  font-family: "Signika", sans-serif;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
 }
 
 .content {
@@ -101,17 +88,17 @@ body {
   justify-self: center;
 }
 .content__titulo h1 {
+  color: #060c08;
   font-family: "Signika", sans-serif;
   font-size: 60px;
-  color: #060c08;
   display: flex;
 }
 .content__contenido {
   /*pag home*/
-  grid-area: contenido;
-  font-family: "Signika", sans-serif;
-  font-size: 40px;
   color: #060c08;
+  font-family: "Signika", sans-serif;
+  grid-area: contenido;
+  font-size: 40px;
   align-self: center;
   justify-self: center;
   display: flex;
@@ -168,9 +155,9 @@ body {
   grid-area: foto4;
 }
 .content__cerveza__texto {
+  color: #060c08;
   font-family: "Signika", sans-serif;
   font-size: 25px;
-  color: #060c08;
   justify-self: center;
   align-self: center;
   margin: 10px;
@@ -189,11 +176,11 @@ body {
 }
 
 footer {
+  color: rgb(180, 174, 174);
   font-family: "Signika", sans-serif;
   font-size: 18px;
   line-height: 22px;
   text-align: center;
-  color: rgb(180, 174, 174);
   position: relative;
   bottom: 0;
 }
@@ -209,6 +196,19 @@ footer {
   color: #060c08;
   background-color: rgb(180, 174, 174);
   margin: 5px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-areas: "logo logo logo" "titulo titulo titulo" "contenido contenido contenido";
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+  }
+  .content__cerveza {
+    grid-template-areas: "foto1" "texto1" "foto2" "texto2" "foto3" "texto3" "foto4" "texto4";
+    grid-template-columns: 200px;
+    grid-template-rows: 200px;
+  }
 }
 
 /*# sourceMappingURL=estilo.css.map */
